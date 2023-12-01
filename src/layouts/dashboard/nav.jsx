@@ -17,7 +17,7 @@ import { useResponsive } from 'src/hooks/use-responsive';
 
 import { account } from 'src/_mock/account';
 
-import Logo from 'src/components/logo';
+// import Logo from 'src/components/logo';
 import Scrollbar from 'src/components/scrollbar';
 
 import { NAV } from './config-layout';
@@ -75,25 +75,17 @@ export default function Nav({ openNav, onCloseNav }) {
       <Stack alignItems="center" spacing={3} sx={{ pt: 5, borderRadius: 2, position: 'relative' }}>
         <Box
           component="img"
-          src="/assets/illustrations/illustration_avatar.png"
+          src="/assets/icons/touba-oil-logo.png"
           sx={{ width: 100, position: 'absolute', top: -50 }}
         />
 
-        <Box sx={{ textAlign: 'center' }}>
-          <Typography variant="h6">Get more?</Typography>
-
-          <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
-            From only $69
-          </Typography>
-        </Box>
-
         <Button
-          href="https://material-ui.com/store/items/minimal-dashboard/"
+          href="https://touba-oil.sn"
           target="_blank"
           variant="contained"
-          color="inherit"
+          color="success"
         >
-          Upgrade to Pro
+          Site Officiel
         </Button>
       </Stack>
     </Box>
@@ -110,7 +102,7 @@ export default function Nav({ openNav, onCloseNav }) {
         },
       }}
     >
-      <Logo sx={{ mt: 3, ml: 4 }} />
+      <Typography variant="heading" sx={{ mt: 3, ml: 4, fontWeight: 'fontWeightBold' }}>TOUBA Resto</Typography>
 
       {renderAccount}
 
@@ -181,11 +173,11 @@ function NavItem({ item }) {
         textTransform: 'capitalize',
         fontWeight: 'fontWeightMedium',
         ...(active && {
-          color: 'primary.main',
+          color: 'success.main',
           fontWeight: 'fontWeightSemiBold',
-          bgcolor: (theme) => alpha(theme.palette.primary.main, 0.08),
+          bgcolor: (theme) => alpha(theme.palette.success.main, 0.08),
           '&:hover': {
-            bgcolor: (theme) => alpha(theme.palette.primary.main, 0.16),
+            bgcolor: (theme) => alpha(theme.palette.success.main, 0.16),
           },
         }),
       }}

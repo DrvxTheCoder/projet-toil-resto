@@ -8,7 +8,7 @@ export default function ProductsPage() {
   return (
     <>
       <Helmet>
-        <title> Products | Minimal UI </title>
+        <title> Code QR  | Minimal UI </title>
       </Helmet>
 
       <ProductsView />
